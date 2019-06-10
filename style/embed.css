@@ -3,16 +3,6 @@
 | Distributed under the terms of the Modified BSD License.
 |----------------------------------------------------------------------------*/
 
-@import './variables.css';
-@import './urls.css';
-
-/* Set the default typography for monospace elements */
-tt,
-code,
-kbd,
-samp,
-pre {
-  font-family: var(--jp-code-font-family);
-  font-size: var(--jp-code-font-size);
-  line-height: var(--jp-code-line-height);
-}
+@import '~font-awesome/css/font-awesome.min.css';
+@import '~@jupyterlab/application/style/index.css';
+@import './index.css';
