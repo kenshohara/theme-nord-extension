@@ -1,6 +1,6 @@
 {
   "name": "@kenshohara/theme-nord-extension",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "JupyterLab - Nord Theme",
   "keywords": [
     "jupyter",
@@ -15,7 +15,9 @@
   "author": "Kensho Hara",
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
-    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}",
+    "static/index.css",
+    "static/*.ttf"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -27,13 +29,13 @@
     "url": "https://github.com/kenshohara/theme-nord-extension.git"
   },
   "scripts": {
-    "build": "tsc -b",
-    "build:src": "tsc -b src",
+    "build": "run-p build:**",
+    "build:typescript": "tsc -b",
     "build:webpack": "webpack",
     "clean": "rimraf lib && rimraf static",
     "prepublishOnly": "npm run build",
-    "watch": "tsc -b --watch",
-    "watch:src": "tsc -b src --watch",
+    "watch": "run-p watch:**",
+    "watch:typescript": "tsc -b --watch",
     "watch:webpack": "webpack --watch"
   },
   "dependencies": {
@@ -53,7 +55,7 @@
     "typedoc": "~0.12.0",
     "typescript": "~3.1.1",
     "url-loader": "~1.0.1",
-    "webpack": "~4.12.0",
+    "webpack": "^4.12.2",
     "webpack-cli": "^3.0.3"
   },
   "publishConfig": {
@@ -61,6 +63,6 @@
   },
   "jupyterlab": {
     "extension": true,
-    "themeDir": "style/index.css"
+    "themeDir": "static"
   }
 }
