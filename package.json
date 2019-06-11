@@ -1,6 +1,6 @@
 {
   "name": "@kenshohara/theme-nord-extension",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JupyterLab - Nord Theme",
   "keywords": [
     "jupyter",
