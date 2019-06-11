@@ -10,7 +10,7 @@ JupyterLab - Nord Theme
 ## Installation
 
 ```bash
-jupyter labextension install theme-nord-extension
+jupyter labextension install @kenshohara/theme-nord-extension
 ```
 
 ## Development
