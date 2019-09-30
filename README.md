@@ -1,6 +1,8 @@
 # theme-nord-extension
 
-JupyterLab - Nord Theme
+This is a theme extension for juypterlab based on the [Nord color palette](https://www.nordtheme.com). I recommend Source Han Mono/Souce Code Pro fonts for this theme.
+
+![sample image](sample.png)
 
 
 ## Prerequisites
