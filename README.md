@@ -15,20 +15,14 @@ This is a theme extension for juypterlab based on the [Nord color palette](https
 jupyter labextension install @kenshohara/theme-nord-extension
 ```
 
-## Development
+## Development (for me)
 
-For a development install (requires npm version 4 or later), do the following in the repository directory:
+For a development install, do the following in the repository directory:
 
 ```bash
-npm install
-npm run build
+conda create -n jupyterlab-ext --override-channels --strict-channel-priority -c conda-forge -c anaconda jupyterlab cookiecutter nodejs git
+conda activate jupyterlab-ext
+jlpm install
+jlpm run build
 jupyter labextension link .
 ```
-
-To rebuild the package and the JupyterLab app:
-
-```bash
-npm run build
-jupyter lab build
-```
-
